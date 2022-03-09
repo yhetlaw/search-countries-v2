@@ -1,0 +1,14 @@
+//Abstract
+@import './sass/abstract/variables';
+//Base
+@import './sass/base/typography';
+//Layout
+@import './sass/layout/home';
+@import './sass/layout/nav';
+@import './sass/layout/not-found';
+//Components
+@import './sass/components/search-bar';
+@import './sass/components/country-card';
+
+body {
+}

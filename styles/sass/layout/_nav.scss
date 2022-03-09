@@ -1,0 +1,24 @@
+.navbar {
+  margin-top: 1rem;
+  -webkit-box-shadow: 0px 9px 5px -7px #c5c5c5;
+  box-shadow: 0px 9px 5px -7px #c5c5c5;
+  &__first-container {
+    width: 30%;
+    margin-left: 5rem;
+    font-weight: 800;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__second-container {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-right: 5rem;
+    @include tablet {
+      display: none !important;
+    }
+    .navbar__dark {
+      font-weight: 800;
+    }
+  }
+}
