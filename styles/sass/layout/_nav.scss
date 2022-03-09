@@ -9,6 +9,9 @@
     @include tablet {
       width: 100%;
     }
+    .navbar__brand {
+      cursor: pointer;
+    }
   }
   &__second-container {
     display: flex !important;

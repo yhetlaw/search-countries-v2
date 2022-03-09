@@ -52,6 +52,10 @@ body {
   }
 }
 
+.navbar__first-container .navbar__brand {
+  cursor: pointer;
+}
+
 .navbar__second-container {
   display: -webkit-box !important;
   display: -ms-flexbox !important;

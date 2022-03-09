@@ -6,7 +6,10 @@ const Nav = () => {
   return (
     <Navbar className='navbar'>
       <Container className='navbar__first-container'>
-        <Navbar.Brand href='#home'>Where in the world?</Navbar.Brand>
+        <Link href='/'>
+          <Navbar.Brand className='navbar__brand'> Where in the world?</Navbar.Brand>
+        </Link>
+
         <Navbar.Toggle />
       </Container>
       <Container className='navbar__second-container'>

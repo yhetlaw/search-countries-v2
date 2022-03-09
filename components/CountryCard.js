@@ -1,9 +1,9 @@
 import { Card } from 'react-bootstrap'
 import Image from 'next/image'
 
-const CountryCard = ({ title, population, region, capital, flag }) => {
+const CountryCard = ({ title, population, region, capital, flag, onClick }) => {
   return (
-    <Card className='country-card'>
+    <Card className='country-card' onClick={onClick}>
       {/* <Card.Img variant='top' src='holder.js/100px180' /> */}
       <Image src={flag} width={50} height={180} objectFit='cover' />
       <Card.Body>
