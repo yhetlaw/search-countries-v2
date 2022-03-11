@@ -1,12 +1,16 @@
+import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/Layout'
 import './../styles/style.scss'
+import { ThemeProvider } from 'next-themes'
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider enableSystem={true} attribute='class'>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   )
 }
 

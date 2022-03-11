@@ -25,11 +25,11 @@ const SearchBar = () => {
           id='dropdown-basic-button'
           title='Filter by region...'
           className='search-bar__filter'>
-          <Dropdown.Item>Africa</Dropdown.Item>
-          <Dropdown.Item>America</Dropdown.Item>
-          <Dropdown.Item>Asia</Dropdown.Item>
-          <Dropdown.Item>Europe</Dropdown.Item>
-          <Dropdown.Item>Oceania</Dropdown.Item>
+          <Dropdown.Item className='search-bar__item'>Africa</Dropdown.Item>
+          <Dropdown.Item className='search-bar__item'>America</Dropdown.Item>
+          <Dropdown.Item className='search-bar__item'>Asia</Dropdown.Item>
+          <Dropdown.Item className='search-bar__item'>Europe</Dropdown.Item>
+          <Dropdown.Item className='search-bar__item'>Oceania</Dropdown.Item>
         </DropdownButton>
       </Container>
     </Navbar>

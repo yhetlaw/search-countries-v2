@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .country-card {
   width: 18rem;
   margin-bottom: 4rem;
   cursor: pointer;
+  @apply bg-bg-light dark:bg-el-dark dark:text-bg-light;
 }

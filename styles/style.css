@@ -1,10 +1,26 @@
+/* :root {
+  $elements: white;
+  $background: hsl(0, 0%, 98%);
+  $input: hsl(0, 0%, 52%);
+  $text: hsl(200, 15%, 8%);
+}
+
+[data-theme='dark'] {
+  $elements: hsl(209, 23%, 22%);
+  $background: hsl(207, 26%, 17%);
+  $input: hsl(0, 0%, 52%);
+  $text: white;
+} */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap");
 body {
   font-family: 'Nunito';
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .home {
-  background-color: #fafafa;
+  @apply bg-white dark:bg-bg-dark;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,10 +50,13 @@ body {
           justify-content: space-between;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .navbar {
-  margin-top: 1rem;
-  -webkit-box-shadow: 0px 9px 5px -7px #c5c5c5;
-  box-shadow: 0px 9px 5px -7px #c5c5c5;
+  background-color: white;
+  @apply shadow-sm dark:shadow-md dark:bg-el-dark dark:text-bg-light;
+  padding: 1rem;
 }
 
 .navbar__first-container {
@@ -54,6 +73,7 @@ body {
 
 .navbar__first-container .navbar__brand {
   cursor: pointer;
+  @apply dark:text-bg-light;
 }
 
 .navbar__second-container {
@@ -72,8 +92,9 @@ body {
   }
 }
 
-.navbar__second-container .navbar__dark {
+.navbar__second-container .navbar__darkmode {
   font-weight: 800;
+  @apply dark:text-bg-light;
 }
 
 .not-found {
@@ -93,11 +114,14 @@ body {
           flex-direction: column;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .search-bar {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   margin-top: 3rem;
-  background-color: #fafafa !important;
+  background-color: transparent !important;
 }
 
 .search-bar__first-container {
@@ -109,8 +133,7 @@ body {
   padding: 0;
   width: 25rem;
   height: 3rem;
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(184, 184, 184, 0.15);
-  box-shadow: 0px 0px 5px 1px rgba(184, 184, 184, 0.15);
+  @apply shadow-sm dark:shadow-md dark:bg-el-dark dark:text-bg-light bg-white dark:bg-el-dark dark:border-none;
 }
 
 .search-bar__first-container .search-bar__form .search-bar__icon {
@@ -118,6 +141,7 @@ body {
   border-right: none;
   font-size: 1.3rem;
   padding-right: 0;
+  @apply bg-white dark:bg-el-dark dark:border-none dark:text-white;
 }
 
 .search-bar__first-container .search-bar__form .search-bar__input {
@@ -125,6 +149,7 @@ body {
   font-size: 14px;
   font-weight: 800;
   height: 3rem;
+  @apply bg-white dark:bg-el-dark dark:border-none dark:text-white;
 }
 
 .search-bar__second-container {
@@ -138,8 +163,6 @@ body {
 
 .search-bar__second-container .search-bar__filter {
   margin-right: -12px;
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(184, 184, 184, 0.35);
-  box-shadow: 0px 0px 5px 1px rgba(184, 184, 184, 0.35);
   height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,12 +170,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  @apply shadow-sm dark:shadow-md dark:text-white dark:bg-el-dark;
 }
 
+.search-bar__second-container .search-bar__filter .search-bar__item {
+  @apply dark:bg-el-dark;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .country-card {
   width: 18rem;
   margin-bottom: 4rem;
   cursor: pointer;
+  @apply bg-bg-light dark:bg-el-dark dark:text-bg-light;
 }
 /*# sourceMappingURL=style.css.map */
