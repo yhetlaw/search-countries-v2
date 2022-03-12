@@ -39,10 +39,8 @@
       height: 3rem;
       display: flex;
       align-items: center;
-      @apply shadow-sm dark:shadow-md dark:text-white dark:bg-el-dark;
-      .search-bar__item {
-        @apply dark:bg-el-dark;
-      }
+
+      @apply shadow-sm dark:shadow-md dark:bg-el-dark;
     }
   }
 }

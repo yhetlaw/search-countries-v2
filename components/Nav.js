@@ -31,6 +31,7 @@ const Nav = () => {
       )
     }
   }
+
   return (
     <Navbar className='navbar'>
       <Container className='navbar__first-container'>

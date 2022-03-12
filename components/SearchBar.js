@@ -1,6 +1,51 @@
 import { Navbar, Container, Form, FormControl, DropdownButton, Dropdown, InputGroup } from 'react-bootstrap'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { useTheme } from 'next-themes'
+import { useState, useEffect } from 'react'
+
 const SearchBar = () => {
+  const { systemTheme, theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const renderFilter = () => {
+    if (!mounted) return null
+
+    const currentTheme = theme === 'system' ? systemTheme : theme
+    if (currentTheme === 'dark') {
+      return (
+        <DropdownButton
+          id='dropdown-basic-button'
+          title='Filter by region...'
+          className='search-bar__filter'
+          menuVariant='dark'>
+          <Dropdown.Item>Africa</Dropdown.Item>
+          <Dropdown.Item>America</Dropdown.Item>
+          <Dropdown.Item>Asia</Dropdown.Item>
+          <Dropdown.Item>Europe</Dropdown.Item>
+          <Dropdown.Item>Oceania</Dropdown.Item>
+        </DropdownButton>
+      )
+    } else {
+      return (
+        <DropdownButton
+          variant=''
+          id='dropdown-basic-button'
+          title='Filter by region...'
+          className='search-bar__filter'>
+          <Dropdown.Item>Africa</Dropdown.Item>
+          <Dropdown.Item>America</Dropdown.Item>
+          <Dropdown.Item>Asia</Dropdown.Item>
+          <Dropdown.Item>Europe</Dropdown.Item>
+          <Dropdown.Item>Oceania</Dropdown.Item>
+        </DropdownButton>
+      )
+    }
+  }
+
   return (
     <Navbar bg='light' expand='lg' className='search-bar'>
       <Container className='search-bar__first-container'>
@@ -19,19 +64,7 @@ const SearchBar = () => {
           </InputGroup>
         </Form>
       </Container>
-      <Container className='search-bar__second-container'>
-        <DropdownButton
-          variant=''
-          id='dropdown-basic-button'
-          title='Filter by region...'
-          className='search-bar__filter'>
-          <Dropdown.Item className='search-bar__item'>Africa</Dropdown.Item>
-          <Dropdown.Item className='search-bar__item'>America</Dropdown.Item>
-          <Dropdown.Item className='search-bar__item'>Asia</Dropdown.Item>
-          <Dropdown.Item className='search-bar__item'>Europe</Dropdown.Item>
-          <Dropdown.Item className='search-bar__item'>Oceania</Dropdown.Item>
-        </DropdownButton>
-      </Container>
+      <Container className='search-bar__second-container'>{renderFilter()}</Container>
     </Navbar>
   )
 }
