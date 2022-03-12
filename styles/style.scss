@@ -6,6 +6,15 @@
 @import './sass/layout/home';
 @import './sass/layout/nav';
 @import './sass/layout/not-found';
+@import './sass/layout/details';
 //Components
 @import './sass/components/search-bar';
 @import './sass/components/country-card';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply dark:bg-bg-dark dark:text-bg-light;
+}

@@ -1,3 +1,6 @@
+import Button from 'react-bootstrap/Button'
+import { useRouter } from 'next/router'
+
 export const getStaticPaths = async () => {
   const res = await fetch('https://restcountries.com/v2/all')
   const data = await res.json()
@@ -25,11 +28,19 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({ country }) => {
+  const router = useRouter()
+  const backHandler = () => {
+    router.push('/')
+  }
+
   console.log(country)
   return (
-    <div>
-      <h1>{country[0].name}</h1>
-      <p>{country[0].population}</p>
+    <div className='details'>
+      <div className='details__container'>
+        <Button variant='secondary' className='details__back-button' onClick={backHandler}>
+          back
+        </Button>{' '}
+      </div>
     </div>
   )
 }

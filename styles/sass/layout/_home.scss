@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 .home {
-  //background-color: $very-light-gray;
-  @apply bg-white dark:bg-bg-dark;
   min-height: 100vh;
   display: flex;
   justify-content: center;

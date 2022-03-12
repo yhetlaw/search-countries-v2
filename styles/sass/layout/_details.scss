@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 92vh;
+
+  .details__container {
+    margin-top: 2rem;
+    width: 90%;
+    height: 75vh;
+    border: 1px solid red;
+
+    .details__back-button {
+      @apply shadow-md text-bg-dark dark:bg-el-dark dark:text-bg-light dark:border-none;
+    }
+  }
+}
