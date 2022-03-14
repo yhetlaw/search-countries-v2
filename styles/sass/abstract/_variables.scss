@@ -5,24 +5,17 @@ $very-dark-blue-text: hsl(200, 15%, 8%); //Light Mode Text
 $dark-gray: hsl(0, 0%, 52%); //Light Mode Input
 $very-light-gray: hsl(0, 0%, 98%); //Light Mode Background
 
-/* :root {
-  $elements: white;
-  $background: hsl(0, 0%, 98%);
-  $input: hsl(0, 0%, 52%);
-  $text: hsl(200, 15%, 8%);
-}
-
-[data-theme='dark'] {
-  $elements: hsl(209, 23%, 22%);
-  $background: hsl(207, 26%, 17%);
-  $input: hsl(0, 0%, 52%);
-  $text: white;
-} */
-
 //Mixin breakpoints for media queries
 $tablet: 800px;
 @mixin tablet {
   @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$mobile: 500px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
     @content;
   }
 }

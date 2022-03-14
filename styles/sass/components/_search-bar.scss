@@ -6,15 +6,22 @@
   box-shadow: none !important;
   margin-top: 3rem;
   background-color: transparent !important;
-
   &__first-container {
     width: 30%;
+    display: flex;
+    @include mobile {
+      width: 100%;
+      justify-content: center !important;
+    }
     .search-bar__form {
       margin-left: -12px;
       padding: 0;
       width: 25rem;
       height: 3rem;
       @apply shadow-sm dark:shadow-md dark:bg-el-dark dark:text-bg-light bg-white dark:bg-el-dark dark:border-none;
+      @include mobile {
+        width: 18rem;
+      }
       .search-bar__icon {
         background-color: white;
         border-right: none;
@@ -32,15 +39,21 @@
     }
   }
   &__second-container {
-    display: flex !important;
+    display: flex;
     justify-content: flex-end !important;
+    @include mobile {
+      justify-content: center !important;
+      margin-top: 1rem;
+    }
     .search-bar__filter {
       margin-right: -12px;
       height: 3rem;
       display: flex;
       align-items: center;
-
       @apply shadow-sm dark:shadow-md dark:bg-el-dark;
+      @include mobile {
+        margin-right: 0px;
+      }
     }
   }
 }

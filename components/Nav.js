@@ -34,16 +34,18 @@ const Nav = () => {
 
   return (
     <Navbar className='navbar'>
-      <Container className='navbar__first-container'>
-        <Link href='/'>
-          <Navbar.Brand className='navbar__brand'> Where in the world?</Navbar.Brand>
-        </Link>
-        <Navbar.Toggle />
-      </Container>
-      <Container className='navbar__second-container'>
-        <BsMoon />
-        {renderThemeChanger()}
-      </Container>
+      <div className='navbar-containers'>
+        <Container className='navbar__first-container'>
+          <Link href='/'>
+            <Navbar.Brand className='navbar__brand'> Where in the world?</Navbar.Brand>
+          </Link>
+          <Navbar.Toggle />
+        </Container>
+        <Container className='navbar__second-container'>
+          <BsMoon />
+          {renderThemeChanger()}
+        </Container>
+      </div>
     </Navbar>
   )
 }
