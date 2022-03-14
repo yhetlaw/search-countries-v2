@@ -34,17 +34,23 @@ const Details = ({ country }) => {
     router.push('/')
   }
 
-  let borders = country[0].translations
-  let border = Object.entries(borders)
-
   let mappedLanguages = []
+  let mappedCurrencies = []
+  let mappedBorders = []
   let languages = country[0].languages
+  let currencies = country[0].currencies
+  let borders = country[0].borders
 
   for (let obj in languages) {
     mappedLanguages.push(languages[obj].name)
   }
-
-  console.log(mappedLanguages)
+  for (let obj in currencies) {
+    mappedCurrencies.push(currencies[obj].name)
+  }
+  for (let obj in borders) {
+    mappedBorders.push(borders)
+  }
+  console.log(country)
   return (
     <div className='details'>
       <div className='details__container'>
@@ -78,7 +84,7 @@ const Details = ({ country }) => {
                   </p>
                   <p>
                     <b>Sub region: </b>
-                    {country[0].subRegion}
+                    {country[0].subregion}
                   </p>
                   <p>
                     <b>Region: </b>
@@ -96,7 +102,7 @@ const Details = ({ country }) => {
                   </p>
                   <p>
                     <b>Currencies: </b>
-                    {/* {country[0].currencies} */}
+                    {mappedCurrencies.join(', ')}
                   </p>
                   <p>
                     <b>Languages: </b>
@@ -106,6 +112,7 @@ const Details = ({ country }) => {
               </div>
               <p>
                 <b>Border countries: </b>
+                {mappedBorders.join(', ')}
               </p>
             </div>
           </div>
