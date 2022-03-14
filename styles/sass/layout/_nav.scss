@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   height: auto;
+
   .navbar-containers {
     width: 90%;
     display: flex;
@@ -19,6 +20,7 @@
       width: 30%;
       font-weight: 800;
       display: flex;
+      padding: 0;
       @include tablet {
         width: 100%;
       }
@@ -39,9 +41,9 @@
       display: flex !important;
       justify-content: flex-end !important;
       align-items: center;
+      padding: 0;
       @include mobile {
         margin: 0;
-        padding: 0;
       }
       .navbar__darkmode {
         font-weight: 800;

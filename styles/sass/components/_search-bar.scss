@@ -7,8 +7,13 @@
   margin-top: 3rem;
   background-color: transparent !important;
   &__first-container {
-    width: 30%;
+    width: 40%;
     display: flex;
+    padding: 0;
+    @include tablet {
+      justify-content: flex-start !important;
+      margin: 0;
+    }
     @include mobile {
       width: 100%;
       justify-content: center !important;
@@ -18,7 +23,7 @@
       padding: 0;
       width: 25rem;
       height: 3rem;
-      @apply shadow-sm dark:shadow-md dark:bg-el-dark dark:text-bg-light bg-white dark:bg-el-dark dark:border-none;
+      @apply shadow-sm dark:shadow-md dark:bg-el-dark dark:text-bg-light bg-white dark:border-none;
       @include mobile {
         width: 18rem;
       }
@@ -41,9 +46,16 @@
   &__second-container {
     display: flex;
     justify-content: flex-end !important;
+    padding: 0;
+    @include tablet {
+      width: 10rem;
+      justify-content: flex-start;
+      margin-right: 0;
+    }
     @include mobile {
       justify-content: center !important;
       margin-top: 1rem;
+      width: 100%;
     }
     .search-bar__filter {
       margin-right: -12px;

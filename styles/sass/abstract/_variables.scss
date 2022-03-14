@@ -6,7 +6,7 @@ $dark-gray: hsl(0, 0%, 52%); //Light Mode Input
 $very-light-gray: hsl(0, 0%, 98%); //Light Mode Background
 
 //Mixin breakpoints for media queries
-$tablet: 800px;
+$tablet: 1000px;
 @mixin tablet {
   @media (max-width: #{$tablet}) {
     @content;

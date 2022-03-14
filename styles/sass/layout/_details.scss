@@ -8,15 +8,88 @@
   align-items: center;
   height: auto;
   min-height: 92vh;
-
   .details__container {
     margin-top: 2rem;
     width: 90%;
-    height: 75vh;
-    border: 1px solid red;
-
-    .details__back-button {
-      @apply shadow-md text-bg-dark dark:bg-el-dark dark:text-bg-light dark:border-none;
+    min-height: 75vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .details__button-bar {
+      width: 100%;
+      .details__back-button {
+        @apply shadow-md text-bg-dark dark:bg-el-dark dark:text-bg-light dark:border-none;
+      }
+    }
+    .details__info {
+      margin-top: 4rem;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include tablet {
+        flex-direction: column;
+        height: auto;
+      }
+      .details__flag {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        @include tablet {
+          width: 100%;
+          height: 25rem;
+        }
+        @include mobile {
+          width: 100%;
+          height: 14rem;
+        }
+      }
+      .details__country-info {
+        width: 50%;
+        height: 100%;
+        @include tablet {
+          width: 100%;
+        }
+        .details__country-info-container {
+          height: 100%;
+          margin-left: 5rem;
+          @include tablet {
+            margin-left: 0;
+            margin-top: 5rem;
+          }
+          .details__title {
+            font-size: 2.5rem;
+            font-weight: 800;
+          }
+          .details__general {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-around;
+            height: 60%;
+            .details__general1 {
+              height: 100%;
+              width: 50%;
+              display: flex;
+              flex-direction: column;
+              * {
+                margin-bottom: 1rem;
+              }
+            }
+            .details__general2 {
+              height: 100%;
+              width: 50%;
+              display: flex;
+              flex-direction: column;
+              * {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
