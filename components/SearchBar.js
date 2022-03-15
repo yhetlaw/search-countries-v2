@@ -2,8 +2,9 @@ import { Navbar, Container, Form, FormControl, DropdownButton, Dropdown, InputGr
 import { AiOutlineSearch } from 'react-icons/ai'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
+import SuggestionList from './SuggestionList'
 
-const SearchBar = ({ handleFilterClick }) => {
+const SearchBar = ({ handleFilterClick, onChangeHandler, matches }) => {
   const { systemTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -52,7 +53,10 @@ const SearchBar = ({ handleFilterClick }) => {
     <Navbar bg='light' expand='lg' className='search-bar'>
       <Container className='search-bar__first-container'>
         <Form className='d-flex search-bar__form'>
-          <InputGroup className='mb-3'>
+          <InputGroup
+            className='mb-3'
+            onChange={(e) => onChangeHandler(e.target.value)}
+            style={{ position: 'relative' }}>
             <InputGroup.Text id='basic-addon1' className='search-bar__icon'>
               <AiOutlineSearch />
             </InputGroup.Text>
@@ -63,6 +67,7 @@ const SearchBar = ({ handleFilterClick }) => {
               aria-describedby='basic-addon1'
               className='search-bar__input'
             />
+            <SuggestionList matches={matches} />
           </InputGroup>
         </Form>
       </Container>

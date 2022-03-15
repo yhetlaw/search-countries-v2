@@ -344,6 +344,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  margin-left: -3px;
 }
 
 @media (max-width: 1000px) {
@@ -439,6 +440,7 @@ body {
 @media (max-width: 500px) {
   .search-bar__second-container .search-bar__filter {
     margin-right: 0px;
+    margin-top: 1rem;
   }
 }
 
@@ -450,6 +452,32 @@ body {
   margin-bottom: 4rem;
   cursor: pointer;
   @apply bg-bg-light dark:bg-el-dark dark:text-bg-light;
+}
+
+.suggestion-list {
+  width: 100%;
+  height: 20rem;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.suggestion-list .suggestion-list__item {
+  cursor: pointer;
+}
+
+.suggestion-list .suggestion-list__item:hover {
+  border-left: 2px solid blue;
 }
 
 @tailwind base;

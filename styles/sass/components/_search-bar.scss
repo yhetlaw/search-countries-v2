@@ -6,10 +6,12 @@
   box-shadow: none !important;
   margin-top: 3rem;
   background-color: transparent !important;
+
   &__first-container {
     width: 40%;
     display: flex;
     padding: 0;
+    margin-left: -3px;
     @include tablet {
       justify-content: flex-start !important;
       margin: 0;
