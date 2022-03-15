@@ -27,7 +27,7 @@ const Home = ({ country }) => {
   }
 
   const renderCountries = () => {
-    if (!region) {
+    if (!region || region === 'All') {
       return country.map((country) => (
         <CountryCard
           key={country.name}

@@ -22,6 +22,7 @@ const SearchBar = ({ handleFilterClick }) => {
           title='Filter by region...'
           className='search-bar__filter'
           menuVariant='dark'>
+          <Dropdown.Item onClick={() => handleFilterClick('All')}>All</Dropdown.Item>
           <Dropdown.Item onClick={() => handleFilterClick('Africa')}>Africa</Dropdown.Item>
           <Dropdown.Item onClick={() => handleFilterClick('Americas')}>Americas</Dropdown.Item>
           <Dropdown.Item onClick={() => handleFilterClick('Asia')}>Asia</Dropdown.Item>
@@ -36,6 +37,7 @@ const SearchBar = ({ handleFilterClick }) => {
           id='dropdown-basic-button'
           title='Filter by region...'
           className='search-bar__filter'>
+          <Dropdown.Item onClick={() => handleFilterClick('All')}>All</Dropdown.Item>
           <Dropdown.Item onClick={() => handleFilterClick('Africa')}>Africa</Dropdown.Item>
           <Dropdown.Item onClick={() => handleFilterClick('Americas')}>Americas</Dropdown.Item>
           <Dropdown.Item onClick={() => handleFilterClick('Asia')}>Asia</Dropdown.Item>
