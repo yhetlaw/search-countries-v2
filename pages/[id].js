@@ -51,6 +51,7 @@ const Details = ({ country }) => {
     mappedBorders.push(borders)
   }
   console.log(country)
+  console.log(mappedBorders)
   return (
     <div className='details'>
       <div className='details__container'>

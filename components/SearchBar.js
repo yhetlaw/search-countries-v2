@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({ handleFilterClick }) => {
   const { systemTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -22,11 +22,11 @@ const SearchBar = () => {
           title='Filter by region...'
           className='search-bar__filter'
           menuVariant='dark'>
-          <Dropdown.Item>Africa</Dropdown.Item>
-          <Dropdown.Item>America</Dropdown.Item>
-          <Dropdown.Item>Asia</Dropdown.Item>
-          <Dropdown.Item>Europe</Dropdown.Item>
-          <Dropdown.Item>Oceania</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Africa')}>Africa</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Americas')}>Americas</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Asia')}>Asia</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Europe')}>Europe</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Oceania')}>Oceania</Dropdown.Item>
         </DropdownButton>
       )
     } else {
@@ -36,11 +36,11 @@ const SearchBar = () => {
           id='dropdown-basic-button'
           title='Filter by region...'
           className='search-bar__filter'>
-          <Dropdown.Item>Africa</Dropdown.Item>
-          <Dropdown.Item>America</Dropdown.Item>
-          <Dropdown.Item>Asia</Dropdown.Item>
-          <Dropdown.Item>Europe</Dropdown.Item>
-          <Dropdown.Item>Oceania</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Africa')}>Africa</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Americas')}>Americas</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Asia')}>Asia</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Europe')}>Europe</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleFilterClick('Oceania')}>Oceania</Dropdown.Item>
         </DropdownButton>
       )
     }

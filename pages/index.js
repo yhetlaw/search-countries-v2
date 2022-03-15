@@ -15,30 +15,52 @@ export const getStaticProps = async (context) => {
 
 const Home = ({ country }) => {
   const router = useRouter()
-
   const [clickedCountry, setClickedCountry] = useState(null)
+  const [region, setRegion] = useState('')
 
   const handleClick = (value) => {
     router.push('/' + value)
   }
 
+  const handleFilterClick = (region) => {
+    setRegion(region)
+  }
+
+  const renderCountries = () => {
+    if (!region) {
+      return country.map((country) => (
+        <CountryCard
+          key={country.name}
+          title={country.name}
+          population={country.population}
+          region={country.region}
+          capital={country.capital}
+          flag={country.flag}
+          onClick={(e) => handleClick(country.name)}
+        />
+      ))
+    }
+
+    return country
+      .filter((country) => country.region == region)
+      .map((country) => (
+        <CountryCard
+          key={country.name}
+          title={country.name}
+          population={country.population}
+          region={country.region}
+          capital={country.capital}
+          flag={country.flag}
+          onClick={(e) => handleClick(country.name)}
+        />
+      ))
+  }
+
   return (
     <div className='home'>
       <div className='home__container'>
-        <SearchBar />
-        <div className='home__cards'>
-          {country.map((country) => (
-            <CountryCard
-              key={country.name}
-              title={country.name}
-              population={country.population}
-              region={country.region}
-              capital={country.capital}
-              flag={country.flag}
-              onClick={(e) => handleClick(country.name)}
-            />
-          ))}
-        </div>
+        <SearchBar handleFilterClick={handleFilterClick} />
+        <div className='home__cards'>{renderCountries()}</div>
       </div>
     </div>
   )
