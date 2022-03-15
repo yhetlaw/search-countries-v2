@@ -46,6 +46,10 @@
         margin: 0;
       }
       .navbar__darkmode {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 8.4rem;
         font-weight: 800;
         @apply dark:text-bg-light;
         @include mobile {

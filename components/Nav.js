@@ -19,8 +19,8 @@ const Nav = () => {
     if (currentTheme === 'dark') {
       return (
         <>
-          <BsSun />
           <Button variant='' className='navbar__darkmode' onClick={() => setTheme('light')}>
+            <BsSun />
             Light mode
           </Button>
         </>
@@ -28,8 +28,8 @@ const Nav = () => {
     } else {
       return (
         <>
-          <BsMoon />
           <Button variant='' className='navbar__darkmode' onClick={() => setTheme('dark')}>
+            <BsMoon />
             Dark mode
           </Button>
         </>

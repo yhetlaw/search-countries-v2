@@ -113,10 +113,6 @@ const Details = ({ country }) => {
                   </p>
                 </div>
               </div>
-              <p>
-                <b>Border countries: </b>
-                {mappedBorders.join(', ')}
-              </p>
             </div>
           </div>
         </div>

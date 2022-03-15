@@ -162,6 +162,16 @@ body {
 }
 
 .navbar .navbar-containers .navbar__second-container .navbar__darkmode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 8.4rem;
   font-weight: 800;
   @apply dark:text-bg-light;
 }
