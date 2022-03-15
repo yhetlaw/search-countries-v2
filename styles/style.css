@@ -1,6 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap'); */
+@font-face {
+  font-family: 'nunitothin';
+  src: url("./../../../public/fonts/nunito300.woff2") format("woff");
+  font-weight: thin;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunitonormal';
+  src: url("./../../../public/fonts/nunito600.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunitobold';
+  src: url("./../../../public/fonts/nunito800.woff2") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Nunito';
+  font-family: 'nunitonormal';
 }
 
 @tailwind base;

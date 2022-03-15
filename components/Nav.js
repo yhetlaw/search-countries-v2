@@ -1,6 +1,7 @@
 import { Navbar, Container, Button } from 'react-bootstrap'
 import Link from 'next/link'
 import { BsMoon } from 'react-icons/bs'
+import { BsSun } from 'react-icons/bs'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
 
@@ -17,15 +18,21 @@ const Nav = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme
     if (currentTheme === 'dark') {
       return (
-        <Button variant='' className='navbar__darkmode' onClick={() => setTheme('light')}>
-          Light mode
-        </Button>
+        <>
+          <BsSun />
+          <Button variant='' className='navbar__darkmode' onClick={() => setTheme('light')}>
+            Light mode
+          </Button>
+        </>
       )
     } else {
       return (
-        <Button variant='' className='navbar__darkmode' onClick={() => setTheme('dark')}>
-          Dark mode
-        </Button>
+        <>
+          <BsMoon />
+          <Button variant='' className='navbar__darkmode' onClick={() => setTheme('dark')}>
+            Dark mode
+          </Button>
+        </>
       )
     }
   }
@@ -39,10 +46,7 @@ const Nav = () => {
           </Link>
           <Navbar.Toggle />
         </Container>
-        <Container className='navbar__second-container'>
-          <BsMoon />
-          {renderThemeChanger()}
-        </Container>
+        <Container className='navbar__second-container'>{renderThemeChanger()}</Container>
       </div>
     </Navbar>
   )
