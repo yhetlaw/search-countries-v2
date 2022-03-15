@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { BiArrowBack } from 'react-icons/bi'
 
 export const getStaticPaths = async () => {
   const res = await fetch('https://restcountries.com/v2/all')
@@ -57,6 +58,7 @@ const Details = ({ country }) => {
       <div className='details__container'>
         <div className='details__button-bar'>
           <Button variant='secondary' className='details__back-button' onClick={backHandler}>
+            <BiArrowBack />
             back
           </Button>{' '}
         </div>

@@ -204,7 +204,23 @@ body {
 }
 
 .details .details__container .details__button-bar .details__back-button {
+  border: 1px solid #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 5rem;
   @apply shadow-md text-bg-dark dark:bg-el-dark dark:text-bg-light dark:border-none;
+}
+
+.details .details__container .details__button-bar .details__back-button:hover {
+  color: white;
+  background-color: #2b3945;
 }
 
 .details .details__container .details__info {
@@ -454,10 +470,14 @@ body {
   @apply bg-bg-light dark:bg-el-dark dark:text-bg-light;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .suggestion-list {
   width: 100%;
-  height: 20rem;
-  background-color: white;
+  height: auto;
+  background-color: whitesmoke;
+  @apply dark:bg-bg-dark dark:text-bg-light;
   color: black;
   z-index: 1;
   display: -webkit-box;
@@ -467,13 +487,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding: 1rem;
 }
 
 .suggestion-list .suggestion-list__item {
   cursor: pointer;
+  margin: 2px 0;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  @apply dark:bg-bg-dark dark:text-bg-light;
+  padding: 1rem;
 }
 
 .suggestion-list .suggestion-list__item:hover {

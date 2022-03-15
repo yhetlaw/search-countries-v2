@@ -3,7 +3,6 @@ import SearchBar from '../components/SearchBar'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import Head from 'next/head'
-import { GiWorld } from 'react-icons/gi'
 
 export const getStaticProps = async (context) => {
   //const id = context.params.id;

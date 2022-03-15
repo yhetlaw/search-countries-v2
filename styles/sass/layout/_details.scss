@@ -18,7 +18,16 @@
     .details__button-bar {
       width: 100%;
       .details__back-button {
+        border: 1px solid rgb(241, 241, 241);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 5rem;
         @apply shadow-md text-bg-dark dark:bg-el-dark dark:text-bg-light dark:border-none;
+        &:hover {
+          color: white;
+          background-color: $dark-blue;
+        }
       }
     }
     .details__info {
