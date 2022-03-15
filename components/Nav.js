@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 const Nav = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  console.log(theme)
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -16,7 +15,6 @@ const Nav = () => {
     if (!mounted) return null
 
     const currentTheme = theme === 'system' ? systemTheme : theme
-    console.log(currentTheme)
     if (currentTheme === 'dark') {
       return (
         <Button variant='' className='navbar__darkmode' onClick={() => setTheme('light')}>
